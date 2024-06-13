@@ -1,0 +1,57 @@
+@use 'sass:color';
+@import '@/styles/colors';
+
+:root,
+::before,
+::after {
+  // Primary colors
+  --col-black-chestnut-oak: #{$col-black-chestnut-oak};
+  --col-tricorn-black: #{$col-tricorn-black};
+  --col-blue-ribbon: #{$col-blue-ribbon};
+  --col-starfleet-blue: #{$col-starfleet-blue};
+  --col-starfleet-blue-rgb: #{$col-starfleet-blue-rgb};
+  --col-icelandic-water: #{$col-icelandic-water};
+  --col-icelandic-water-rgb: #{$col-icelandic-water-rgb};
+  --col-red: #{$col-red};
+  --col-red-rgb: #{$col-red-rgb};
+
+  // Z-indexes
+  --z-modal-overlay: 14;
+  --z-modal: 9;
+  --z-default: 1;
+  --z-hidden: -1;
+
+  // Text variables
+  /* stylelint-disable max-line-length */
+  --primary-font-family: 'Ubuntu', -apple-system, 'BlinkMacSystemFont',
+    'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue',
+    sans-serif;
+  /* stylelint-enable max-line-length */
+
+  --p-size: #{to-rem(14)};
+
+  // Base
+  --container-max-width: #{to-rem(380)};
+  --container-side-padding: #{to-rem(20)};
+  --primary-text-color: var(--col-radiant-silver);
+
+  @include respond-above(medium) {
+    --container-max-width: #{to-rem(1100)};
+    --container-side-padding: #{to-rem(40)};
+  }
+
+  @include respond-above(xmedium) {
+    --container-max-width: #{to-rem(1180)};
+  }
+
+  @include respond-above(large) {
+    --container-max-width: #{to-rem(1620)};
+    --container-side-padding: #{to-rem(50)};
+  }
+
+  // App overlay
+  --app-overlay-bg: rgba(var(--col-dark-tone-ink-rgb), 60%);
+
+  // Sign up form
+  --sign-up-form-input-bg: var(--col-black-chestnut-oak);
+}

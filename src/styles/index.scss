@@ -1,0 +1,9 @@
+@import 'node_modules/mayanbet-sdk/dist/style.css';
+
+@import './base/variables';
+@import './base/app';
+
+// Components
+@import './components/main-content';
+@import './components/app-button';
+@import './components/app-modal';
